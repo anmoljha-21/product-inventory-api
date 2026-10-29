@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: product-inventory-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/product_inventory
+    username: inventory_user
+    password: local_dev_password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: 3600000
